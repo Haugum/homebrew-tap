@@ -6,7 +6,6 @@ class Flugenberg < Formula
   version "0.3.1"
   license "MIT"
 
-  depends_on "calibre"
   depends_on "node"
 
   def install
@@ -15,6 +14,19 @@ class Flugenberg < Formula
 
     (bin/"flugenberg").write_env_script libexec/"flugenberg",
       "FLUGENBERG_ASSETS_DIR" => pkgshare/"renderer"
+  end
+
+  def caveats
+    <<~EOS
+      Flugenberg also needs Calibre at runtime.
+
+        brew install --cask calibre
+
+      Then run:
+
+        flugenberg init
+        flugenberg doctor
+    EOS
   end
 
   test do

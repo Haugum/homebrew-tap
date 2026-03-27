@@ -4,6 +4,7 @@ Install:
 
 ```bash
 brew install Haugum/homebrew-tap/flugenberg
+brew install --cask calibre
 ```
 
 Upgrade:
@@ -11,6 +12,7 @@ Upgrade:
 ```bash
 brew update
 brew upgrade flugenberg
+brew upgrade --cask calibre
 ```
 
 Uninstall:
@@ -21,3 +23,4 @@ brew untap Haugum/homebrew-tap
 ```
 
 Flügenberg installs from public prebuilt release artifacts published through this tap.
+Rust is not required on end-user machines.
