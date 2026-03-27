@@ -9,8 +9,8 @@ class Flugenberg < Formula
   depends_on "node"
 
   def install
-    libexec.install "flugenberg-#{version}-macos-arm64/flugenberg"
-    (pkgshare/"renderer").install Dir["flugenberg-#{version}-macos-arm64/renderer/*"]
+    libexec.install "flugenberg"
+    (pkgshare/"renderer").install Dir["renderer/*"]
 
     (bin/"flugenberg").write_env_script libexec/"flugenberg",
       "FLUGENBERG_ASSETS_DIR" => pkgshare/"renderer"
