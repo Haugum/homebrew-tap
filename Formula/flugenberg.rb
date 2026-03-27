@@ -1,9 +1,9 @@
 class Flugenberg < Formula
   desc "Convert EPUB/MOBI/AZW3 books into Kindle-friendly AZW3 and send them over USB"
   homepage "https://github.com/Haugum/homebrew-tap"
-  url "https://github.com/Haugum/homebrew-tap/releases/download/v0.3.1/flugenberg-0.3.1-macos-arm64.tar.gz"
-  sha256 "6e58afd59ec9ce6aec938098afcb3a251ac172a522c85a9a65bd8ff7a12eac60"
-  version "0.3.1"
+  url "https://github.com/Haugum/homebrew-tap/releases/download/v0.3.2/flugenberg-0.3.2-macos-arm64.tar.gz"
+  sha256 "029f94e261162eaa68b46ce6d16904269479a3b959cc9f2aee71ef365b82245c"
+  version "0.3.2"
   license "MIT"
 
   depends_on "node"
