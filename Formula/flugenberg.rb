@@ -6,14 +6,14 @@ class Flugenberg < Formula
   version "0.3.1"
   license "MIT"
 
-  depends_on cask: "calibre"
+  depends_on "calibre"
   depends_on "node"
 
   def install
-    bin.install "flugenberg-#{version}-macos-arm64/flugenberg" => "flugenberg"
+    libexec.install "flugenberg-#{version}-macos-arm64/flugenberg"
     (pkgshare/"renderer").install Dir["flugenberg-#{version}-macos-arm64/renderer/*"]
 
-    (bin/"flugenberg").write_env_script libexec/"bin/flugenberg",
+    (bin/"flugenberg").write_env_script libexec/"flugenberg",
       "FLUGENBERG_ASSETS_DIR" => pkgshare/"renderer"
   end
 
